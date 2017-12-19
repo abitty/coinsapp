@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Coins</string>
     <string name="login_hint">логин</string>
+    <string name="action_login">Логин</string>
     <string name="pwd_hint">пароль</string>
+    <string name="action_settings">Настройки</string>
+
 </resources>
