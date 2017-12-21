@@ -6,12 +6,13 @@
     android:layout_height="match_parent"
     tools:context="ru.altergot.coins.LoginActivity">
 
+    <include layout="@layout/toolbar" />
     <EditText
         android:id="@+id/eLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="64dp"
         android:ems="10"
         android:hint="@string/login_hint"
         android:inputType="textPersonName"

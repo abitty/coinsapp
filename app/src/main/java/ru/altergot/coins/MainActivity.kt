@@ -7,6 +7,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.view.View.OnClickListener
 import android.support.v7.widget.Toolbar
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,19 +15,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //tSupportActionBar(toolbar)
-        val tb = findViewById<Toolbar>(R.id.toolbar)
+        val tb = findViewById<android.support.v7.widget.Toolbar>(R.id.toolbar)
+        tb.inflateMenu(R.menu.app_tb_menu)
+        Toast.makeText(this,tb.id.toString(),Toast.LENGTH_LONG)
+        text_msg.text = "toolbar id="+tb.id.toString()
+
         setSupportActionBar(tb)
-/*
-        login_button.setOnClickListener {
-            // Handler code here.
-            val intent: Intent = Intent(this, LoginActivity::class.java)
-            val message = "auth state"
-            intent.putExtra(EXTRA_MESSAGE, message)
-            startActivity(intent);
-        }
-*/
         val loginClick = OnClickListener {
-            val intent: Intent = Intent(this, LoginActivity::class.java)
+            val intent= Intent(this, LoginActivity::class.java)
             val message = "auth state"
             intent.putExtra(EXTRA_MESSAGE, message)
             startActivity(intent)
